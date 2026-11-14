@@ -107,7 +107,16 @@ h2 span { color: var(--violet); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 @media (max-width: 800px) { .site-header, .hero, .section { width: min(100% - 40px, 600px); }.site-header { height: 78px; }.main-nav { display: none; }.header-cta { padding: 9px 11px; font-size: 9px; }.hero { display: flex; flex-direction: column; align-items: stretch; }.hero-copy { padding: 75px 0 55px; }.hero-art { min-height: 480px; }.moon { width: 280px; height: 280px; left: 15%; }.moon::after { width: 238px; height: 238px; }.cards-grid, .journal-grid { grid-template-columns: 1fr; }.feature-card { max-width: 500px; }.section { padding: 85px 0; }.section-heading { display: block; }.section-note { width: auto; margin-top: 25px; }.perspective-section { display: flex; flex-direction: column; }.perspective-art { min-height: 500px; }.perspective-copy { padding: 75px 30px; }.journal-card, .journal-card:not(:first-child) { min-height: 230px; padding: 28px 0; border-right: 0; border-bottom: 1px solid var(--line); }.journal-card:last-child { border-bottom: 0; }.footer-top { grid-template-columns: 1fr; gap: 25px; }.social-links { align-items: flex-start; }.footer-bottom { flex-wrap: wrap; gap: 13px; }.modal-card { padding: 45px 25px 35px; }.modal-card h2 { font-size: 39px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
-/* Version 1: calm editorial foundation. */
-.version-note { color: var(--muted); font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-.hero { min-height: 700px; }
-@media (max-width: 800px) { .version-note { display: none; } }
+/* Version 2: warmer palette and kinetic mood cards. */
+:root { --ink: #172f2e; --paper: #f0eadc; --cream: #fffdf5; --coral: #e85d3f; --violet: #146b68; --cyan: #f5b5a6; --yellow: #e8c85b; --muted: #5c706b; --line: rgba(23,47,46,.18); }
+.hero-art { background: var(--violet); transform: rotate(1deg); transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+.hero-art:hover { transform: rotate(0) scale(.985); }
+.feature-card { transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s; }
+.feature-card:hover { transform: translateY(-17px) rotate(2deg); box-shadow: 12px 18px 0 rgba(20,107,104,.2); }
+.mood-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.mood-card { min-height: 280px; display: flex; flex-direction: column; justify-content: space-between; padding: 28px; color: var(--cream); transition: transform .4s, border-radius .4s; }
+.mood-card strong { font: 600 32px var(--display); line-height: .96; letter-spacing: -.07em; }
+.mood-card span { font: 10px var(--mono); text-transform: uppercase; }
+.mood-night { background: var(--violet); }.mood-question { background: var(--coral); color: var(--ink); }.mood-move { background: var(--ink); color: var(--yellow); }
+.mood-card:hover, .mood-card.is-active { transform: translateY(-12px) rotate(-2deg); border-radius: 35px 0 35px 0; }
+@media (max-width: 800px) { .mood-grid { grid-template-columns: 1fr; } }

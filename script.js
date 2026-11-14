@@ -1,1 +1,1 @@
-﻿/* Version 1 is intentionally presentation-first. */
+﻿document.querySelectorAll(".mood-card").forEach((card) => card.addEventListener("mouseenter", () => card.classList.add("is-active"))); document.querySelectorAll(".mood-card").forEach((card) => card.addEventListener("mouseleave", () => card.classList.remove("is-active")));
