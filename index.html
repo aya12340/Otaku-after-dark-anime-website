@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,7 @@
         <a href="#perspective">Perspective</a>
         <a href="#journal">Journal</a>
       </nav>
-      <a class="header-cta" href="#moods">Join the club <span>↗</span></a>
+      <a class="header-cta" href="#newsletter">Join the club <span>↗</span></a>
     </header>
 
     <main>
@@ -53,6 +53,13 @@
           <div class="city city-front"></div>
           <div class="hero-sticker">Not<br />just<br /><strong>cartoons.</strong></div>
           <div class="art-caption"><span>01</span> The night is young</div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Topics">
+        <div class="ticker-track">
+          <span>ANIME IS ART</span><i>✦</i><span>MANGA IS LITERATURE</span><i>✦</i><span>STORIES FOR EVERY AGE</span><i>✦</i>
+          <span>ANIME IS ART</span><i>✦</i><span>MANGA IS LITERATURE</span><i>✦</i>
         </div>
       </section>
 
@@ -123,24 +130,89 @@
           <blockquote>
             “The best stories don’t talk down to you. They invite you to look closer.”
           </blockquote>
-          <a class="button button-dark" href="#moods">Get the good stuff <span>↗</span></a>
+          <a class="button button-dark" href="#newsletter">Get the good stuff <span>↗</span></a>
         </div>
       </section>
-      <section class="mood-section section" id="moods" aria-labelledby="moods-heading">
+
+      <section class="journal-section section" id="journal" aria-labelledby="journal-heading">
         <div class="section-heading">
           <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> Choose your mood</p>
-            <h2 id="moods-heading">What are you<br /><span>feeling today?</span></h2>
+            <p class="eyebrow"><span class="eyebrow-line"></span> From the journal</p>
+            <h2 id="journal-heading">For curious<br /><span>minds.</span></h2>
           </div>
-          <p class="section-note">No algorithm, no gatekeeping. Just a starting point for your next great story.</p>
+          <a class="text-link" href="#newsletter">See all stories <span>↗</span></a>
         </div>
-        <div class="mood-grid">
-          <a class="mood-card mood-night" href="#discover"><strong>Need a<br />quiet night?</strong><span>Try Mushishi ↗</span></a>
-          <a class="mood-card mood-question" href="#discover"><strong>Want to<br />question everything?</strong><span>Try Monster ↗</span></a>
-          <a class="mood-card mood-move" href="#discover"><strong>Ready to<br />move forward?</strong><span>Try Cowboy Bebop ↗</span></a>
+        <div class="journal-grid">
+          <article class="journal-card">
+            <p class="journal-number">01 / ESSAY</p>
+            <h3>Why we keep returning to the same fictional worlds.</h3>
+            <p class="journal-meta">6 min read <span>·</span> The comfort of a good rewatch</p>
+            <a class="round-arrow" href="#newsletter" aria-label="Read essay">↗</a>
+          </article>
+          <article class="journal-card journal-highlight">
+            <p class="journal-number">02 / GUIDE</p>
+            <h3>A beginner’s map to anime that respects your time.</h3>
+            <p class="journal-meta">8 min read <span>·</span> No filler, just feeling</p>
+            <a class="round-arrow" href="#newsletter" aria-label="Read guide">↗</a>
+          </article>
+          <article class="journal-card">
+            <p class="journal-number">03 / LIST</p>
+            <h3>Ten manga panels that deserve to be framed.</h3>
+            <p class="journal-meta">5 min read <span>·</span> A visual feast</p>
+            <a class="round-arrow" href="#newsletter" aria-label="Read list">↗</a>
+          </article>
         </div>
       </section>
+
+      <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-heading">
+        <div class="newsletter-glow"></div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> The after-dark dispatch</p>
+        <h2 id="newsletter-heading">Good stories.<br /><span>Once a month.</span></h2>
+        <p class="newsletter-copy">A hand-picked note on anime, manga, and the stories that stay with you.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <label class="sr-only" for="email">Your email address</label>
+          <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required />
+          <button class="button button-primary" type="submit">Subscribe <span>↗</span></button>
+        </form>
+        <p class="form-message" id="form-message" role="status"></p>
+        <p class="fine-print">No noise. No spoilers. Unsubscribe whenever you want.</p>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="brand" href="#" aria-label="Otaku After Dark home">
+          <span class="brand-mark">夜</span>
+          <span>OTAKU <em>AFTER</em> DARK</span>
+        </a>
+        <p>For grown-up feelings<br />and good conversations.</p>
+        <div class="social-links">
+          <a href="#newsletter">Instagram ↗</a>
+          <a href="#newsletter">Letterboxd ↗</a>
+          <a href="#newsletter">Goodreads ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Otaku After Dark</span>
+        <span>Made for the night owls <b>✦</b></span>
+        <a href="#hero-heading">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="age-modal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+      <div class="modal-card">
+        <button class="modal-close" id="modal-close" aria-label="Close dialog">×</button>
+        <p class="modal-kicker">A small reminder</p>
+        <div class="modal-mark">✦</div>
+        <h2 id="modal-heading">Anime isn’t<br /><span>just for kids.</span></h2>
+        <p>
+          Some stories are playful. Some are profound. The medium has room for all of
+          it — including the complicated, beautiful parts of being human.
+        </p>
+        <button class="button button-dark modal-enter" id="modal-enter">I’m here for the stories <span>↗</span></button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
